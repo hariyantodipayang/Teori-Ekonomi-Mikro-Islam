@@ -200,6 +200,77 @@ h1 em{ font-style:italic; font-weight:420; color:var(--teal); }
 .ref-item a:hover{ text-decoration:underline; }
 .ref-item .ref-src{ font-family:"IBM Plex Mono",monospace; font-size:11.5px; color:var(--ink-faint); }
 
+/* ---------- Halaman bedah rujukan ---------- */
+.prose h3{
+  font-family:"Public Sans",sans-serif; font-weight:700; font-size:13px;
+  letter-spacing:.1em; text-transform:uppercase; color:var(--teal);
+  margin:28px 0 12px;
+}
+.prose p a, .prose li a{ color:var(--teal); text-decoration:none; font-weight:600; }
+.prose p a:hover, .prose li a:hover{ text-decoration:underline; }
+
+.callout{
+  background:var(--teal-soft); border-left:3px solid var(--teal);
+  border-radius:0 10px 10px 0; padding:16px 20px; margin:0 0 24px;
+}
+.callout .callout-title{
+  font-family:"IBM Plex Mono",ui-monospace,monospace; font-size:11.5px;
+  letter-spacing:.08em; text-transform:uppercase; color:var(--teal);
+  margin:0 0 8px; font-weight:500;
+}
+.callout p{ font-size:14.5px; line-height:1.65; margin:0; color:var(--ink-soft); }
+
+.src-dossier{
+  background:var(--surface); border:1px solid var(--rule); border-radius:12px;
+  padding:18px 20px; margin:0 0 24px; box-shadow:var(--shadow);
+}
+.src-dossier .src-title{
+  font-family:"Fraunces",Georgia,serif; font-weight:560; font-size:18px;
+  margin:0 0 14px; color:var(--ink); line-height:1.3; text-wrap:balance;
+}
+.src-meta{
+  display:grid; grid-template-columns:max-content 1fr; gap:8px 18px;
+  margin:0; font-size:14px; line-height:1.5;
+}
+.src-meta dt{
+  font-family:"IBM Plex Mono",ui-monospace,monospace; font-size:11px;
+  letter-spacing:.06em; text-transform:uppercase; color:var(--gold-strong);
+  padding-top:2px;
+}
+.src-meta dd{ margin:0; color:var(--ink-soft); }
+@media (max-width:560px){
+  .src-meta{ grid-template-columns:1fr; gap:2px 0; }
+  .src-meta dd{ margin-bottom:10px; }
+}
+
+.src-note{
+  font-family:"IBM Plex Mono",ui-monospace,monospace; font-size:11px;
+  color:var(--gold-strong); background:var(--amber-soft);
+  border-radius:4px; padding:2px 6px; white-space:nowrap;
+}
+
+.fineprint{
+  font-size:13px !important; line-height:1.6 !important; color:var(--ink-faint) !important;
+  border-top:1px solid var(--rule); padding-top:14px; margin-top:18px !important;
+}
+
+.deep-dive{
+  display:block; text-decoration:none;
+  background:var(--surface); border:1px solid var(--teal); border-radius:12px;
+  padding:18px 20px; margin:0 0 24px; box-shadow:var(--shadow);
+  transition:transform .15s ease, box-shadow .15s ease;
+}
+.deep-dive:hover{ transform:translateY(-1px); }
+.deep-dive .dd-kicker{
+  font-family:"IBM Plex Mono",ui-monospace,monospace; font-size:11px;
+  letter-spacing:.1em; text-transform:uppercase; color:var(--teal); margin:0 0 6px;
+}
+.deep-dive .dd-title{
+  font-family:"Fraunces",Georgia,serif; font-weight:560; font-size:18px;
+  margin:0 0 6px; color:var(--ink);
+}
+.deep-dive .dd-note{ font-size:14px; line-height:1.6; color:var(--ink-soft); margin:0; }
+
 /* prev/next nav */
 .pagenav{
   margin-top:56px; padding-top:28px; border-top:1px solid var(--rule);
